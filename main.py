@@ -100,7 +100,9 @@ def main():
                    325, 330, 335, 340, 345, 350]
 
     for size in input_sizes:
-        arr = [random.randint(0, 10000) for _ in range(size)]
+        arr = []
+        for i in range(size):
+            arr.append(random.randint(0, 100000))
 
         insertion_time = measure_time(insertionSort, arr)
 
